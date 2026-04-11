@@ -21,9 +21,8 @@ export class ProductsGrid {
     {
       id: 2,
       name: 'Product 2',
-      description: 'Description for Product 2',
+      description: 'Description for Product 2 loren ipsum dolor sit amet, consectetur adipiscing elit. loren ipsum dolor sit amet, consectetur adipiscing elit.',
       price: 9.99,
-      originalPrice: 14.99,
     },
     {
       id: 3,
