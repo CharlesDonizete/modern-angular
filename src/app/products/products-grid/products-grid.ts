@@ -43,16 +43,22 @@ export class ProductsGrid {
     const term = this.searchTerm().toLowerCase().trim();
     if (!term) return this.productos();
 
-    return this.productos().filter((product) =>
-      product.name.toLowerCase().includes(term) ||
-      product.description.toLowerCase().includes(term));
+    return this.productos().filter(
+      (product) =>
+        product.name.toLowerCase().includes(term) ||
+        product.description.toLowerCase().includes(term),
+    );
   });
 
   protected clearSearch() {
     this.searchTerm.set('');
   }
 
-    protected trimSearch() {
+  protected trimSearch() {
     this.searchTerm.update((value) => value.trim());
+  }
+
+  protected onAddToCard(product: Product) {
+    console.log('Product added to cart:', product.name);
   }
 }
